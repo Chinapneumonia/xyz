@@ -1,0 +1,51 @@
+这个只合适于查询dns出口ip  dns原理/dns服务器 dns隧道 等需要有主域/子域托管的情况下。
+              使用wuxianshudian.xyz 的主域
+
+首先添加几条a记录指向服务器
+info主域
+@ A  115.227.37.17
+@ A  221.133.234.222
+info子域
+windy080224  A  115.227.37.17
+windy080224  A  221.133.234.222
+2132541475 A 115.227.37.17
+2974163920 A 221.133.234.222
+
+然后在注册主机名(有的服务商不会检查) 然后在godaddy修改域名dns即可！
+
+使用子域 www
+首先添加几条a记录指向服务器
+xyz主域
+@ A  115.227.37.17
+@ A  221.133.234.222
+然后添加一个ns记录 
+www ns wuxianshudian.xyz
+
+
+xyz子域
+windy080224  A  115.227.37.17
+windy080224  A  221.133.234.222
+2132541475 A 115.227.37.17
+2974163920 A 221.133.234.222
+然后添加一个ns记录 
+www ns windy080224.wuxianshudian.xyz
+www ns 2432541475.wuxianshudian.xyz
+www ns 2974163920.wuxianshudian.xyz
+
+
+
+info主域
+@ A  115.227.37.17
+@ A  221.133.234.222
+然后添加一个ns记录 
+www ns wuxianshudian.info
+
+info子域
+windy080224  A  115.227.37.17
+windy080224  A  221.133.234.222
+2132541475 A 115.227.37.17
+2974163920 A 221.133.234.222
+然后添加一个ns记录 
+www ns windy080224.wuxianshudian.info
+www ns 2432541475.wuxianshudian.info
+www ns 2974163920.wuxianshudian.info
