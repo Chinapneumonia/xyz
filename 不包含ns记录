@@ -1,0 +1,32 @@
+     主机记录A
+主域a记录
+@ A  221.133.234.222
+@ A  115.227.37.17
+子域a记录
+www A 221.133.234.222
+www A 115.227.37.17
+
+   别名记录cname
+   主域别名主域
+   @ cname wuxianshudian.info
+   主域别名子域
+   @ cname www.wuxianshudian.info
+   
+   子域别名主域
+   www cname wuxianshudian.info
+   子域别名子域
+   www cname www.wuxianshudian.info
+   
+        mx记录(邮件交换记录)
+        主域
+   @ mx 24325(不能用时设置为5) www.wuxianshudian.info
+   @ mx 41475(不能用时设置为10) wuxianshudia.info
+         子域
+   www mx 29741(不能用时设置为5) www.wuxianshudian.info
+   www mx 63920(不能用时设置为10) wuxianshudia.info
+            TXT记录(本文记录)
+        主域
+        @ TXT windy080224
+        子域
+        www TXT windy080224
+        
